@@ -1,0 +1,203 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="~/Content/sb-admin.css" rel="stylesheet">
+    <link href="~/Content/css/login.css?vs=1" rel="stylesheet">
+</head>
+<body>
+    <div class="row" style="height: -webkit-fill-available;">
+        <div class="container" id="maincontent">
+           
+               
+                @*<img class="bkg-triangle" src="~/Content/images/imon-ahamed-e-cart0-01.jpg" />*@
+            
+                <div class="row" style="margin-top:75px;">
+                    <div class="col-md-4" style="padding-left:90px;">
+                        <img src="~/Content/images/Ecart.PNG" />
+                     </div>
+                        <div class="col-md-4 login-wrap-width">
+                            <div class="login-panel panel panel-default" index-enabled="yes">
+                                <!--<div class="panel-heading">
+                <h3 class="panel-title">
+                    Please Sign In</h3>
+            </div>--->
+                                <div class="panel-body padding-reset">
+                                    @*<div class="logo-wrap">
+                        <img class="bkg-triangle" src="~/Content/images/imon-ahamed-e-cart0-01.jpg" />
+                    </div>*@
+                                    <form role="form">
+                                        <fieldset>
+                                            @*<div class="form-group">
+                                <input class="form-control" id="txtCode" tabindex="1" placeholder="Code" name="code" autocomplete="off" autofocus>
+                            </div>*@
+                                            <div class="form-group">
+                                                <input class="form-control" id="txtLoginName" tabindex="2" placeholder="Login ID" name="login" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" id="txtPassword" tabindex="3" placeholder="Password" name="password"
+                                                       type="password" value="" autocomplete="off">
+                                            </div>
+                                            @*<div class="checkbox">
+                                <label>
+                                    <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                </label>
+                            </div>*@
+                                            <!-- Change this to a button or input when using this as a form -->
+                                            <a onclick="Login();" tabindex="4" id="submit" class="btn btn-orange btn-block btn-sm">Login</a>
+                                            <div class="progress progress-striped active login-progress" id="divProgressModal">
+                                                <div class="progress-bar login-progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">just a moment</div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    @*<div class="row">
+                        <div class="row" style="margin-top:10px;text-align:center;">
+                            <button type="button" class="btn cancel" id="openhelpbutton" onclick="openHelpline()">Mantis Helpline</button>
+                            <button type="button" class="btn cancel" id="closehelpbutton" style="display: none;" onclick="closeHelpline()">Mantis Helpline</button>
+                        </div>
+                        <div class="row" id="openhelpline" style="margin-top:10px;text-align:center;display: none;">
+                            <label style="text-align:left;color:Green;"><b>080-47096674</b></label><br>
+                        </div>
+
+                    </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+     
+    </div>
+    <!-- Core Scripts - Include with every page -->
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/utilities.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap-dialog.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- SB Admin Scripts - Include with every page -->
+    <script type="text/javascript" src="~/Scripts/sb-admin.js"></script>
+    <script type="text/javascript">
+
+        function openHelpline(){
+            $("#openhelpline").show();
+            $("#closehelpbutton").show();
+            $("#openhelpbutton").hide();
+        }
+        function closeHelpline() {
+            $("#openhelpline").hide();
+            $("#closehelpbutton").hide();
+            $("#openhelpbutton").show();
+        }
+        $(function () {
+            OnEnter();
+            //OnFocus();
+            submitLoginOnEnter();
+        });
+        function Login() {
+
+            if (!validateLogin())
+                return false;
+            var Code, LoginID, Password, GUID, RegKey, intAPIURLID;
+            GUID = '';
+            RegKey = '';
+            intAPIURLID = 1;
+
+           // Code = $("#txtCode").val();
+            LoginID = $("#txtLoginName").val();
+            Password = $("#txtPassword").val();
+            ShowProgressBarModal(true, '#submit');
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("LogInValidate", "Home")',
+                dataType: "json",
+                data: {
+                    LoginemailId: LoginID, LoginPassword: Password
+                },
+                success: function (result) {
+                    console.log(result);
+                    if (result.indexOf("Error") > -1) {
+                        alert(result);
+                        $('#divProgressModal').hide();
+                        $('#submit').show();
+
+                    }
+                    else {
+                        var resultParse = JSON.parse(result);
+                        if (resultParse.Table.length > 0) {
+
+                            if (resultParse.Table[0]["IsSuccess"] == "1") {
+                                var url = "/Report/ProductReport";
+                                window.location.replace(url);
+                            } else {
+                                alert("Invalid Login");
+                                $('#divProgressModal').hide();
+                                $('#submit').show();
+                            }
+                        }
+                        else {
+                            alert("Invalid Login");
+                            $('#divProgressModal').hide();
+                            $('#submit').show();
+                        }
+                    }
+                },
+                error: function (msg) {
+                    ShowProgressBarModal(false, '#submit');
+                    alert("Invalid Login");
+                    $('#divProgressModal').hide();
+                    $('#submit').show();
+                }
+            });
+        }
+
+        function submitLoginOnEnter() {
+            $('#txtPassword').keypress(function (e) {
+                var code = (e.keyCode ? e.keyCode : e.which);
+                if (code == 13) {
+                    if (validateLogin())
+                        Login();
+                    else
+                        return;
+                }
+            });
+        }
+
+        function validateLogin(){
+            //Code = $("#txtCode").val();
+            LoginID = $("#txtLoginName").val();
+            Password = $("#txtPassword").val();
+            var validForm = true;
+            var errorMsg = '';
+            //if (Code == '' || Code == null) {
+            //    validForm = false;
+            //    errorMsg = 'Enter Valid Code';
+            //} else
+                if (LoginID == '' || LoginID == null) {
+                validForm = false;
+                errorMsg = 'Enter Valid Login ID';
+            }else if(Password == '' || Password == null){
+                validForm = false;
+                errorMsg = 'Enter Valid Password';
+            }
+
+            if (validForm){
+             return true;
+            }else{
+                alert(errorMsg);
+            $('#submit').show();
+            $('#divProgressModal').hide();
+             return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

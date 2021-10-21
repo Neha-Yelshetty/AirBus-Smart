@@ -1,0 +1,92 @@
+﻿/*html { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}*/
+#maincontent {
+    /*background: url(../images/imon-ahamed-e-cart0-01.jpg) no-repeat center center fixed; */
+    background-color:blueviolet;
+    width:100%;
+    height: 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    /*    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    float: left;
+}
+
+#helpno {
+    width: 0%;
+    height: 100%;
+    float: right;
+    background-color: #425361;
+    border-left: 1px solid #cccccc;
+    box-shadow: 10px 0 10px -10px #333;
+}
+
+body {
+    background: transparent;
+    height: 900px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.login-panel {
+    padding: 25px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    /*  background: url(../images/login-wrap-bg.png);*/
+}
+
+    .login-panel .panel-body {
+        padding: 0;
+    }
+
+.logo-wrap {
+    margin: 0 0 25px 0;
+}
+
+.btn-orange {
+    padding: 5px 25px;
+    background: #ff6000;
+    border: 1px solid #de5400;
+    color: #fff;
+    font-size: 14px;
+    min-width: 65px;
+}
+
+.login-progress {
+    padding: 0;
+    display: none;
+    width: 100%;
+    background: transparent;
+    min-height: 35px;
+}
+
+.login-progress-bar {
+    padding: 7px 0;
+    background: #E0570A;
+    min-height: 35px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.login-wrap-width {
+    min-width: 400px !important;
+}
+
+.column {
+    float: left;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,708 @@
+﻿.customradio {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .customradio label.radio-inline {
+        padding-left: 0px;
+    }
+
+.search:focus {
+    border: 1px solid #f57812;
+}
+/* Hide the browser's default radio button */
+.customradio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 2px solid #1d6981;
+}
+
+/* On mouse-over, add a grey background color */
+/*.customradio:hover input ~ .checkmark {
+  background-color: #ccc;
+}*/
+
+/* When the radio button is checked, add a blue background */
+.customradio input:checked ~ .checkmark {
+    background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.customradio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.customradio .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1d6981;
+    border: 2px solid #1d6981;
+}
+
+.navbar {
+    min-height: 43px;
+}
+
+.page-header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.page-main-block {
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+
+table.dataTable thead .sorting {
+    background: none;
+}
+
+    table.dataTable thead .sorting:after {
+        content: none;
+    }
+
+    table.dataTable thead .sorting:after {
+        content: none;
+    }
+
+table.dataTable thead {
+    background-color: #005575;
+    color: #fff;
+    white-space: nowrap;
+}
+
+    table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc {
+        background-color: #005575;
+    }
+
+.filter-content .inp-full {
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 10px;
+    font-size: .85rem;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.form-group span.input-group-addon {
+    background: transparent;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+}
+
+.custom-select span.input-group-addon {
+    background: transparent;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+}
+
+.form-group input.form-control {
+    background: transparent;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid #eee;
+    transition: none;
+    border-bottom-left-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+    height: 48px;
+}
+
+.selectdiv {
+    position: relative;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.selectdiv:after {
+    content: '\f078';
+    font: normal normal normal 20px FontAwesome;
+    color: #555;
+    right: 7px;
+    top: 8px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.selectdiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 32px;
+    margin: 2px 0px;
+    padding-left: 5px;
+    padding-right: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.75;
+    color: #555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #ddd;
+    border-radius: 3px !important;
+    /*-ms-word-break: normal;
+  word-break: normal;*/
+}
+
+    .selectdiv select option {
+        font-weight: bold;
+    }
+
+/*.table-scroll .left-table-arrow, .table-scroll .right-table-arrow, .table-scroll .table-block
+{
+    float: left;
+    display:inline-block;
+}*/
+
+.table-scroll .left-table-arrow, .table-scroll .table-block, .table-scroll .right-table-arrow {
+    display: table-cell;
+}
+
+.table-scroll .left-table-arrow, .table-scroll .right-table-arrow {
+    width: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px;
+    position: relative;
+    top: 39px;
+}
+
+.table-scroll .head-td {
+    height: 38px;
+    background-color: #004963;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.table-scroll .left-table-arrow .left-arrow, .table-scroll .right-table-arrow .right-arrow {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 25px;
+    height: 24px;
+    position: absolute;
+    top: 38%;
+    background-clip: padding-box;
+    margin: 0 1px;
+}
+
+    .table-scroll .left-table-arrow .left-arrow span, .table-scroll .right-table-arrow .right-arrow span {
+        display: block;
+        padding: 4px;
+        font-weight: bold;
+        color: #bbbbbc;
+    }
+
+.table-scroll .bg-blue {
+    background-color: #004964;
+}
+
+
+
+table td {
+    white-space: nowrap;
+}
+
+span.label {
+    color: #383838;
+    padding-bottom: 5px;
+    display: inline-block;
+    background-color: #E1E6E8;
+}
+
+.radio-inline {
+    font-size: 15px
+}
+
+.legend {
+    width: 30em;
+}
+
+    .legend .title {
+        display: block;
+        margin-bottom: 0.5em;
+        line-height: 1.2em;
+        padding: 0 0.3em;
+        float: left;
+    }
+
+    .legend .color-sample {
+        display: block;
+        float: left;
+        width: 1em;
+        height: 1em;
+        border: 2px solid; /* Comment out if you don't want to show the fillColor */
+        border-radius: 0.2em; /* Comment out if you prefer squarish samples */
+        margin-right: 0.5em;
+    }
+
+.action-btn {
+    background: #f57812;
+    color: #FFF;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+    margin-right: 6px;
+    padding: 7px 15px;
+}
+
+    .action-btn:hover {
+        background: #c4600e;
+        transition: .3s;
+    }
+
+.top-btn {
+    padding: 8px 7px !important;
+}
+
+#pnrDetailsTable td {
+    white-space: normal;
+}
+
+div.dataTables_filter label {
+    float: left !important;
+}
+
+.dataTables_wrapper .dataTables_scroll {
+    width: 770px;
+    height: auto;
+}
+
+    .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: #F5F5F5;
+        color: #555;
+    }
+
+    .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
+        /*overflow: hidden !important;
+	overflow-x: scroll !important;*/
+        border: none;
+        width: calc( 100% - 2px);
+    }
+
+    .dataTables_wrapper .dataTables_scroll div.dataTables_scrollHead div.dataTables_scrollHeadInner {
+        width: calc( 100% - 2px);
+    }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+    ::-webkit-scrollbar:horizontal {
+        height: 5px !important;
+    }
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+.table_slider-arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    color: #4268b3;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.table_slider-arrow-up {
+    position: absolute;
+    left: 50%;
+    top: -7%;
+    color: #4268b3;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.table_slider-arrow-left {
+    position: absolute;
+    left: -1%;
+    top: 50%;
+    color: #005575;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.table_slider-arrow-right {
+    position: absolute;
+    right: -1%;
+    top: 50%;
+    color: #005575;
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 2;
+    z-index: 9999;
+}
+
+.table_slider-arrow-left.disabled {
+    color: #dddddd;
+    cursor: none;
+}
+
+.table_slider-arrow-right.disabled {
+    color: #dddddd;
+    cursor: none;
+}
+
+.table_slider-arrow-left.disabled i {
+    cursor: none;
+}
+
+.table_slider-arrow-right.disabled i {
+    cursor: none;
+}
+
+.jconfirm-content label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#feedbackChartData .dataTables_wrapper .dataTables_scroll {
+    width: 100%;
+}
+
+#feedbackChartData .table_slider-arrow-left {
+    left: 0% !important;
+}
+
+span.label {
+    color: #383838;
+    padding-bottom: 5px;
+    display: inline-block;
+    background-color: #E1E6E8;
+}
+
+.legend {
+    width: 30em;
+}
+
+    .legend .title {
+        display: block;
+        margin-bottom: 0.5em;
+        line-height: 1.2em;
+        padding: 0 0.3em;
+        float: left;
+    }
+
+    .legend .color-sample {
+        display: block;
+        float: left;
+        width: 1em;
+        height: 1em;
+        border: 2px solid; /* Comment out if you don't want to show the fillColor */
+        border-radius: 0.2em; /* Comment out if you prefer squarish samples */
+        margin-right: 0.5em;
+    }
+
+#feedbackChartData table.dataTable tbody th, #feedbackChartData table.dataTable tbody td {
+    max-width: 300px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 8px !important
+}
+
+table.dataTable tr:nth-child(even) {
+    background-color: #f5f6f7;
+}
+
+.tooltip > .tooltip-inner {
+    width: 200px !important;
+    background-color: #FDFFDF !important;
+    color: black !important;
+    border: 1px solid #004963;
+    white-space: normal;
+    padding: 10px
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: #004963 !important;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+.tabscroll {
+    overflow: scroll;
+    height: 300px;
+}
+
+.table-scroll {
+    padding: 0 !important;
+}
+
+table.dataTable tbody tr.selected {
+    background-color: #DAF3FF !important;
+}
+
+    table.dataTable tbody tr.selected td {
+        background-color: #DAF3FF !important;
+    }
+
+option:hover {
+    background-color: #f57812 !important;
+}
+
+.reg-top-sec span {
+    font-weight: normal !important;
+}
+
+.reg-top-sec p {
+    font-weight: bold;
+    text-overflow: ellipsis;
+    max-width: 394px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.custom-select {
+    position: relative;
+}
+
+    /*.custom-select select {
+        display: none;*/ /*hide original SELECT element:*/
+    /*}*/
+
+.select-selected {
+    background-color: #fff;
+}
+
+    /*style the arrow inside the select element:*/
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 18px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #444 transparent transparent transparent;
+    }
+
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #444 transparent;
+        top: 10px;
+    }
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+    color: #444;
+    padding: 14px 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    border: 1px solid #f57812;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: #f57812;
+    color: #fff
+}
+
+.select-selected.select-arrow-active {
+    border: 1px solid #f57812 !important;
+}
+
+.select-selected {
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: 100% !important;
+}
+
+.ui-datepicker-group-first {
+    padding: 0 5px 0 0 !important
+}
+
+.tooltip .tooltiptext {
+    top: -5px;
+    left: 105%;
+}
+
+.rounded {
+    padding: 25px 0px;
+    height: 86px;
+    width: 173px;
+    margin: 2px;
+    border-radius: 5%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.rounded-rectangle-1 {
+    background-color: #6667EF;
+}
+
+.rounded-rectangle-2 {
+    background-color: #FC8693;
+}
+
+.rounded-rectangle-3 {
+    background-color: #38BE93;
+}
+
+.rectangle {
+    margin: 2px;
+    padding: 25px 0px;
+    height: 86px;
+    width: 173px;
+    text-align: center;
+    color: #444;
+    border-radius: 5%;
+    border: 1px solid #dddddd;
+}
+
+.no-Rating {
+    background-color: rgb(0, 84, 118);
+    color: #ffffff !important;
+}
+
+.rectangle .count, .rounded .count {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.rectangle .title, .rounded .title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#A table td, #B table td {
+    white-space: normal;
+    font-size: 12px;
+    padding: 6px;
+    font-weight: 500;
+}
+
+.mid-sec {
+    width: 95% !important;
+    padding: 15px 30px !important;
+}
+
+.content-area {
+    margin-top: 0;
+    padding: 15px 10px !important;
+}
+
+#export .dataTables_wrapper .dataTables_scroll {
+    width: 98%;
+    height: auto;
+}
+
+.rdo-text {
+    margin: 5px;
+    /* padding-bottom: 5px; */
+    color: #444;
+    float: left;
+}
+
+.firstheader {
+    background-color: #00531C !important;
+    color: #ffffff;
+    text-align: left !important;
+}
+
+.secondheader {
+    background-color: #CAD6DD !important;
+    color: #000 !important;
+    text-align: left !important;
+}
+
+table.dataTable {
+    margin: 0 !important;
+}

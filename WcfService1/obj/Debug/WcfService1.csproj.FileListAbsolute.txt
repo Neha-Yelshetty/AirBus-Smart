@@ -1,0 +1,11 @@
+D:\Projects\AirBus\ShoppingMart\WcfService1\bin\WcfService1.dll.config
+D:\Projects\AirBus\ShoppingMart\WcfService1\bin\WcfService1.dll
+D:\Projects\AirBus\ShoppingMart\WcfService1\bin\WcfService1.pdb
+D:\Projects\AirBus\ShoppingMart\WcfService1\obj\Debug\WcfService1.csproj.AssemblyReference.cache
+D:\Projects\AirBus\ShoppingMart\WcfService1\obj\Debug\WcfService1.csproj.CoreCompileInputs.cache
+D:\Projects\AirBus\ShoppingMart\WcfService1\obj\Debug\WcfService1.dll
+D:\Projects\AirBus\ShoppingMart\WcfService1\obj\Debug\WcfService1.pdb
+D:\Projects\AirBus\ShoppingMart\WcfService1\bin\CompressDecompress.dll
+D:\Projects\AirBus\ShoppingMart\WcfService1\bin\MySql.Data.dll
+D:\Projects\AirBus\ShoppingMart\WcfService1\bin\MySql.Data.Entity.dll
+D:\Projects\AirBus\ShoppingMart\WcfService1\bin\Newtonsoft.Json.dll

@@ -1,0 +1,217 @@
+﻿@media (max-width: 1023px) {
+    .bkg-right-content .panel-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .bkng-labels-wrap .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+}
+
+@media (max-width: 1100px) {
+    .bkg-modify-search-row .col-md-3, .bkg-modify-search-row .col-md-5, .bkg-modify-search-row .col-md-1 {
+        float: left;
+    }
+
+    .bkg-modify-search-row .col-md-3 {
+        width: 50%;
+        margin-bottom: 7px;
+    }
+
+    .bkg-modify-search-row .col-md-5 {
+        width: 75%;
+    }
+
+    .bkg-modify-search-row .col-md-1 {
+        width: 25%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 799px) {
+    .bkg-search-btn-wrap {
+        width: 100%;
+    }
+
+        .bkg-search-btn-wrap button:first-child {
+            width: 155px;
+        }
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+    .bkg-search-row .col-md-1:first-child {
+        margin: 5px 0;
+    }
+
+    .bkg-sel-date select {
+        padding: 0;
+        margin-right: 0;
+    }
+
+    #chkBackDateBooking {
+        margin: 6px 0 0 3px;
+    }
+
+    .bkg-search-btn {
+        padding-left: 0 0 0 15px;
+    }
+}
+
+@media (max-width: 800px) and (max-width: 1023px) {
+    .bkg-sel-date {
+        width: 240px;
+        float: left;
+    }
+
+    .bkg-search-btn-wrap {
+        float: right;
+    }
+
+    #PaxDetails .col-md-2 {
+        width: 100% !important;
+    }
+
+    #PaxDetails .col-md-3 {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .bkg-sel-date {
+        clear: both;
+        width: 292px;
+    }
+
+    .bkg-search-row .col-md-1 {
+        width: 19%;
+    }
+
+    .bkg-search-row .col-md-3 {
+        width: 40%;
+    }
+
+    .bkg-agent-wrap .col-md-6 {
+        width: 100%;
+    }
+
+    .bkg-fare-row .col-md-3 {
+        padding-right: 0;
+    }
+
+    .bkg-pax-row .col-xs-3 {
+        width: 50%;
+    }
+
+    .bkg-pax-row .col-xs-4 {
+        width: 50%;
+    }
+
+    .bkg-fare-row label {
+        font-size: 11px;
+    }
+
+    #PaxDetails .col-md-2 {
+        width: 30%;
+    }
+
+    #PaxDetails .col-md-3 {
+        width: 35%;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .bkg-agent-wrap .col-md-6 {
+        width: 50%;
+    }
+
+    #PaxDetails .col-md-3 {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width:1366px) {
+    .bkg-sel-date {
+        float: left;
+        width: 33.33333333333333%;
+        clear: none;
+    }
+
+    .bkg-search-row .col-md-1 {
+        width: 8.333333333333332%;
+    }
+
+    .bkg-search-row .col-md-3 {
+        width: 25%;
+    }
+
+    .bkg-search-btn-wrap {
+        padding: 0;
+    }
+
+    .bkg-fare-row .col-md-3 {
+        padding-right: 15px;
+    }
+
+    .bkg-pax-row .col-xs-3 {
+        width: 25%;
+    }
+
+    .bkg-pax-row .col-xs-4 {
+        width: 33.33333333333333%;
+    }
+}
+
+@media screen and (max-width:1365px) {
+    .bkg-table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+
+        .bkg-table-responsive > .table {
+            margin-bottom: 0;
+        }
+
+    .mr-table-responsive > .table > thead > tr > th,
+    .mr-table-responsive > .table > tbody > tr > th,
+    .mr-table-responsive > .table > tfoot > tr > th,
+    .mr-table-responsive > .table > thead > tr > td,
+    .mr-table-responsive > .table > tbody > tr > td,
+    .mr-table-responsive > .table > tfoot > tr > td {
+        white-space: nowrap;
+    }
+
+    .bkg-table-responsive > .table-bordered {
+        border: 0;
+    }
+
+    .mr-table-responsive > .table-bordered > thead > tr > th:first-child,
+    .mr-table-responsive > .table-bordered > tbody > tr > th:first-child,
+    .mr-table-responsive > .table-bordered > tfoot > tr > th:first-child,
+    .mr-table-responsive > .table-bordered > thead > tr > td:first-child,
+    .mr-table-responsive > .table-bordered > tbody > tr > td:first-child,
+    .mr-table-responsive > .table-bordered > tfoot > tr > td:first-child {
+        border-left: 0;
+    }
+
+    .mr-table-responsive > .table-bordered > thead > tr > th:last-child,
+    .mr-table-responsive > .table-bordered > tbody > tr > th:last-child,
+    .mr-table-responsive > .table-bordered > tfoot > tr > th:last-child,
+    .mr-table-responsive > .table-bordered > thead > tr > td:last-child,
+    .mr-table-responsive > .table-bordered > tbody > tr > td:last-child,
+    .mr-table-responsive > .table-bordered > tfoot > tr > td:last-child {
+        border-right: 0;
+    }
+
+    .mr-table-responsive > .table-bordered > tbody > tr:last-child > th,
+    .mr-table-responsive > .table-bordered > tfoot > tr:last-child > th,
+    .mr-table-responsive > .table-bordered > tbody > tr:last-child > td,
+    .mr-table-responsive > .table-bordered > tfoot > tr:last-child > td {
+        border-bottom: 0;
+    }
+}
